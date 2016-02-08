@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= content_for?(:title) ? yield(:title) : 'Gemgem - Feedback for a better world.'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Rails Foundation'}"}
+    = stylesheet_link_tag 'application', media: 'all'
+    -# Modernizr is required for Zurb Foundation
+    = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    %header
+      = concept "navigation/cell", OpenStruct.new(real_user: params[:real_user], current_user: params[:current_user], "signed_in?" => tyrant.signed_in?)
+    %main{:role => "main"}
+      = #render 'layouts/messages'
+      = yield

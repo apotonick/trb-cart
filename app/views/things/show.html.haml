@@ -1,0 +1,45 @@
+=# params[:current_user].inspect
+
+.header
+  %h1
+    = concept("thing/cell/decorator", @thing).(:thumb)
+
+    #{@thing.name}
+    - if @thing_op.policy.(:edit?)
+      - # TODO: test links with admin, owner, non-owner.
+      = link_to "Edit", edit_thing_path(@thing)
+    - if @thing_op.policy.(:delete?)
+      = link_to "Delete", thing_path(@thing), method: :delete
+
+.description
+  #{@thing.description}
+
+.authors
+  By
+  - @thing.users.each do |user|
+    = user.email
+    [#{user.id}]
+
+%hr
+
+= simple_form_for @form, url: create_comment_thing_path(@thing) do |f|
+
+  %h3 What do you think?
+
+  = f.input :body, placeholder: "Your comment", label: false
+  = f.collection_radio_buttons :weight, *@form.weights
+
+  - unless tyrant.signed_in?
+    = f.fields_for :user do |u|
+      = u.input :email, placeholder: "Your email", label: false
+
+  = f.button :submit, class: :expand
+
+
+= @form.errors.messages
+
+
+
+%h3 #{@thing.comments.size} comments
+
+= concept "comment/cell/grid", @thing
