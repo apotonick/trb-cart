@@ -7,23 +7,10 @@ GIT
       tilt
 
 PATH
-  remote: ../roar
-  specs:
-    roar (1.0.3)
-      representable (>= 2.4.0, < 3.1.0)
-
-PATH
   remote: ../trailblazer-cells
   specs:
     trailblazer-cells (0.0.1)
       cells (>= 4.0.3, < 5.0.0)
-
-PATH
-  remote: ../trailblazer-rails
-  specs:
-    trailblazer-rails (0.2.4)
-      trailblazer (>= 1.0.4)
-      trailblazer-loader (>= 0.0.7)
 
 GEM
   remote: https://rubygems.org/
@@ -63,13 +50,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
     arel (6.0.3)
-    axiom-types (0.1.1)
-      descendants_tracker (~> 0.0.4)
-      ice_nine (~> 0.11.0)
-      thread_safe (~> 0.3, >= 0.3.1)
-    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -85,12 +66,6 @@ GEM
     cells-haml (0.0.8)
       cells (~> 4.0.0.beta6)
       haml (>= 4.1.0.beta.1)
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
-    cocaine (0.5.8)
-      climate_control (>= 0.0.3, < 1.0)
-    coercible (1.0.0)
-      descendants_tracker (~> 0.0.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -102,26 +77,13 @@ GEM
     debug_inspector (0.0.2)
     declarative (0.0.5)
       uber (>= 0.0.15)
-    descendants_tracker (0.0.4)
-      thread_safe (~> 0.3, >= 0.3.1)
     disposable (0.2.3)
       declarative (~> 0.0.4)
       representable (>= 2.4.0, <= 3.1.0)
       uber
-    dragonfly (1.0.12)
-      addressable (~> 2.3)
-      multi_json (~> 1.0)
-      rack (>= 1.3.0)
-    email_validator (1.6.0)
-      activemodel
-    equalizer (0.0.11)
     erubis (2.7.0)
     eventmachine (1.0.8)
     execjs (2.6.0)
-    file_validators (1.2.0)
-      activemodel (>= 3.0)
-      cocaine (~> 0.5.4)
-      mime-types (>= 1.0)
     foundation-icons-sass-rails (3.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -144,18 +106,11 @@ GEM
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
     i18n (0.7.0)
-    ice_nine (0.11.1)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    kaminari (0.16.3)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
-    kaminari-cells (0.0.4)
-      cells (>= 4.0.0, <= 5.0.0)
-      kaminari (>= 0.16.0)
     libv8 (3.16.14.13)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -186,12 +141,6 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
-    paperdragon (0.0.11)
-      dragonfly (~> 1.0.12)
-      uber
-    pg (0.18.4)
-    pundit (1.0.1)
-      activesupport (>= 3.0.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -216,9 +165,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
-    rails-timeago (2.13.0)
-      actionpack (>= 3.1)
-      activesupport (>= 3.1)
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
@@ -239,8 +185,6 @@ GEM
     representable (3.0.0)
       declarative (~> 0.0.5)
       uber (~> 0.0.15)
-    responders (2.1.0)
-      railties (>= 4.2.0, < 5)
     ruby_parser (3.1.3)
       sexp_processor (~> 4.1)
     sass (3.2.19)
@@ -278,25 +222,15 @@ GEM
       reform (>= 2.0.0, < 3.0.0)
       uber (>= 0.0.15)
     trailblazer-loader (0.0.9)
-    tyrant (0.0.3)
-      bcrypt
-      disposable (>= 0.1.11)
-      reform (~> 2.0)
-      trailblazer (~> 1.0)
-      warden
+    trailblazer-rails (0.2.3)
+      trailblazer (>= 1.0.4)
+      trailblazer-loader (>= 0.0.4)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.15)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    virtus (1.0.5)
-      axiom-types (~> 0.1)
-      coercible (~> 1.0)
-      descendants_tracker (~> 0.0, >= 0.0.3)
-      equalizer (~> 0.0, >= 0.0.9)
-    warden (1.2.4)
-      rack (>= 1.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -308,30 +242,20 @@ DEPENDENCIES
   cells (= 4.0.3)
   cells-haml (= 0.0.8)
   coffee-rails (~> 4.0.0)
-  disposable (= 0.2.3)
-  email_validator
-  file_validators (~> 1.2)
   foundation-icons-sass-rails
   foundation-rails (= 5.4.5.0)
   haml!
   haml-rails
   jquery-rails
-  kaminari-cells
   memory_test_fix
   minitest-line
   minitest-rails-capybara
-  paperdragon (>= 0.0.10)
-  pg
-  pundit
   quiet_assets
   rails (~> 4.2.0)
-  rails-timeago
   rails_12factor
   rails_layout
   reform (= 2.1.0)
   representable (= 3.0.0)
-  responders
-  roar!
   sass-rails (~> 4.0.3)
   simple_form
   sqlite3
@@ -339,10 +263,8 @@ DEPENDENCIES
   thin
   trailblazer (= 1.1.0)
   trailblazer-cells!
-  trailblazer-rails!
-  tyrant (= 0.0.3)
+  trailblazer-rails
   uglifier (>= 1.3.0)
-  virtus
 
 BUNDLED WITH
    1.10.6
