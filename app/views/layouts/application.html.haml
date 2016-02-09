@@ -11,4 +11,5 @@
   %body
     %header
     %main{:role => "main"}
+      = current_user.email
       = yield

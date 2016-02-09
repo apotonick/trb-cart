@@ -31,9 +31,9 @@ class Cart < ActiveRecord::Base
     end
 
   private
-    def before_save!
-      contract.count = contract.products.inject(0) { |memo, p| memo += p.qty }
-    end
+    # def before_save!
+    #   contract.count = contract.products.inject(0) { |memo, p| memo += p.qty }
+    # end
 
     callback :before_save do
       collection :products do
