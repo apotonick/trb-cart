@@ -1,5 +1,8 @@
 class Product < ActiveRecord::Base
   class Create < Trailblazer::Operation
+    include Model
+    model Product, :create
+
     contract do
       property :title
       property :description
@@ -7,8 +10,6 @@ class Product < ActiveRecord::Base
       validates :title, presence: true
     end
 
-    include Model
-    model Product, :create
 
     def process(params)
       validate(params[:product]) do |contract|

@@ -84,9 +84,6 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.8)
     execjs (2.6.0)
-    foundation-icons-sass-rails (3.0.0)
-      railties (>= 3.1.1)
-      sass-rails (>= 3.1.1)
     foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -165,12 +162,7 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
     rails_layout (1.0.29)
-    rails_serve_static_assets (0.0.4)
-    rails_stdout_logging (0.0.4)
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
@@ -242,7 +234,6 @@ DEPENDENCIES
   cells (= 4.0.3)
   cells-haml (= 0.0.8)
   coffee-rails (~> 4.0.0)
-  foundation-icons-sass-rails
   foundation-rails (= 5.4.5.0)
   haml!
   haml-rails
@@ -252,10 +243,8 @@ DEPENDENCIES
   minitest-rails-capybara
   quiet_assets
   rails (~> 4.2.0)
-  rails_12factor
   rails_layout
   reform (= 2.1.0)
-  representable (= 3.0.0)
   sass-rails (~> 4.0.3)
   simple_form
   sqlite3
