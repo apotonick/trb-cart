@@ -14,9 +14,8 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
-    @user = User.new(email: 'email@trb.to')
-    @cart = Cart.find_by(user_id: @user.id)
+    run Product::Index
+    # @cart = Cart.find_by(user_id: @user.id)
   end
 
   def show

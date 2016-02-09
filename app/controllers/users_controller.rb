@@ -14,5 +14,4 @@ class UsersController < ApplicationController
 
     redirect_to :new
   end
-
 end
