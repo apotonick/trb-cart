@@ -1,0 +1,7 @@
+%h1 Create Product
+
+= simple_form_for @form do |f|
+  = f.button :submit, class: :expand
+
+= @form.errors.messages
+
