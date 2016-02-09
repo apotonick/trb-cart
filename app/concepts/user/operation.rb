@@ -3,8 +3,14 @@ class User < ActiveRecord::Base
     include Model
     model User, :create
 
+    contract do
+      property :email
+    end
+
     def process(params)
-      @model = User.create(params[:user])
+      validate(params[:user]) do
+        contract.save
+      end
     end
   end
 end

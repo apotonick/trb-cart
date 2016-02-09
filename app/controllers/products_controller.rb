@@ -4,8 +4,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    # @product = Product.find(params[:product_id]) # UI-specific logic!
-
     run Product::Create do |op|
       flash[:notice] = "Created product: [#{op.model.id}] \"#{op.model.title}\""
 
@@ -24,5 +22,5 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
-  
+
 end
