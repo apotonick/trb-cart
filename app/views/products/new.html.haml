@@ -3,6 +3,7 @@
 = simple_form_for @form do |f|
   = f.input :title
   = f.input :description, as: :text
+  = f.input :price
   = f.button :submit, class: :expand
 
 = @form.errors.messages

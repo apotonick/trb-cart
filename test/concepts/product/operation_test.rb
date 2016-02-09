@@ -7,6 +7,7 @@ class ProductOperationTest < MiniTest::Spec
         product: {
           title:       "Best Of The Police",
           description: "Greatest songs ever written!",
+          price:       55
         },
       )
 

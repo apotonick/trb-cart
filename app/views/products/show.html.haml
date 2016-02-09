@@ -1,0 +1,10 @@
+%h1
+  = "[#{@product.id}] #{@product.title}"
+
+%span
+  Price:
+  = "$#{@product.price}"
+%br
+%span
+  Description:
+  = @product.description

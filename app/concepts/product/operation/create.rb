@@ -6,8 +6,10 @@ class Product < ActiveRecord::Base
     contract do
       property :title
       property :description
+      property :price
 
       validates :title, presence: true
+      # validates :price, presence: true
     end
 
 

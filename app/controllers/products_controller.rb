@@ -4,14 +4,25 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @thing = Thing.find(params[:thing_id]) # UI-specific logic!
+    # @product = Product.find(params[:product_id]) # UI-specific logic!
 
-    run Comment::Create do |op|
-      flash[:notice] = "Created comment for \"#{op.thing.name}\""
+    run Product::Create do |op|
+      flash[:notice] = "Created product: [#{op.model.id}] \"#{op.model.title}\""
 
-      return redirect_to thing_path(op.thing)
+      return redirect_to product_path(op.model)
     end
 
     render :new
   end
+
+  def index
+    @products = Product.all
+    @user = User.new(email: 'email@trb.to')
+    @cart = Cart.find_by(user_id: @user.id)
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+  
 end

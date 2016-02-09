@@ -1,0 +1,26 @@
+%h1 Products
+
+%table
+  %tr
+    %th ID
+    %th Title
+    %th Price
+    %th Description
+    %th
+  - @products.each do |product|
+    %tr
+      %td
+        = product.id
+      %td
+        = product.title
+      %td
+        = "$#{product.price || 0}"
+      %td
+        = product.description
+      %td
+        - if @cart
+          %form{ action: '', method: 'post'}
+            %input{type: 'hidden', name: 'id', value: @cart.id}
+            %input{type: 'hidden', name: 'products[id]', value: product.id}
+            %input{type: 'hidden', name: 'products[qty]', value: 1}
+            %input{type: 'submit', value: 'Send'}
