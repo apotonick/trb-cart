@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
     def process(params)
       validate(params[:user]) do
+        model.cart = Cart.new
         contract.save
       end
     end

@@ -18,9 +18,7 @@
       %td
         = product.description
       %td
-        - if @cart
-          %form{ action: '', method: 'post'}
-            %input{type: 'hidden', name: 'id', value: @cart.id}
-            %input{type: 'hidden', name: 'products[id]', value: product.id}
-            %input{type: 'hidden', name: 'products[qty]', value: 1}
-            %input{type: 'submit', value: 'Send'}
+        %form{ action: "/carts/add", method: "post"}
+          %input{type: "hidden", name: "products_attributes[0][id]", value: product.id}
+          %input{name: "products_attributes[0][qty]", value: 1}
+          %input{type: "submit", value: "Add to cart!"}

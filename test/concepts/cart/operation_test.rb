@@ -32,12 +32,12 @@ class CartOperationTest < MiniTest::Spec
   end
 
   describe "Add" do
-    let (:cart)    { Cart::Create.(cart: { user_id: user.id }).model }
+    let (:user)    { User::Create.(user: { email: "bla" }).model }
     let (:product) { Product::Create.(product: {title: "Ruby"}).model }
 
     it "adds product" do
       op = Cart::Add.(
-        id:   cart.id,
+        current_user:   user,
         products: [
           {
             id:  product.id,

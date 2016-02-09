@@ -19,8 +19,9 @@ class Cart < ActiveRecord::Base
       property :count, default: 0
     end
 
-    include Model
-    model Cart, :create
+    def model!(params)
+      params[:current_user].cart
+    end
 
     def process(params)
       validate(params) do |contract|
@@ -42,7 +43,7 @@ class Cart < ActiveRecord::Base
     end
 
     def increment_count!(product, options)
-      contract.count += product.qty
+      contract.count += product.qty.to_i
     end
   end
 end
