@@ -2,6 +2,7 @@
 
 = simple_form_for @form do |f|
   = f.input :email
+  = f.input :password
   = f.button :submit, class: :expand
 
 = @form.errors.messages

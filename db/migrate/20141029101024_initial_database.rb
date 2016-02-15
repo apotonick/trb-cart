@@ -20,7 +20,8 @@ class InitialDatabase < ActiveRecord::Migration
     end
 
     create_table :users do |t|
-      t.integer :email
+      t.text :email
+      t.text :password_encrypted
 
       t.timestamps
     end
