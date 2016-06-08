@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/haml/haml.git
-  revision: 7c7c16930b7fefd6dd9869a3af73f8d86c673b77
-  ref: 7c7c169
-  specs:
-    haml (4.1.0.beta.1)
-      tilt
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -85,6 +77,8 @@ GEM
       sass (>= 3.2.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    haml (4.1.0.beta.1)
+      tilt
     haml-rails (0.9.0)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
@@ -233,7 +227,7 @@ DEPENDENCIES
   cells-haml
   coffee-rails (~> 4.0.0)
   foundation-rails (= 5.4.5.0)
-  haml!
+  haml
   haml-rails
   jquery-rails
   memory_test_fix
