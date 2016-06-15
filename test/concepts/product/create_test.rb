@@ -7,7 +7,6 @@ class ProductOperationTest < MiniTest::Spec
         product: {
           title:       "Best Of The Police",
           description: "Greatest songs ever written!",
-          price:       55
         },
       )
 
@@ -27,21 +26,21 @@ class ProductOperationTest < MiniTest::Spec
 
       res.must_equal false
       op.model.persisted?.must_equal false
-      op.errors.messages.must_equal({:title=>["can't be blank"]})
+      op.errors.messages.must_equal({:title=>["can't be blank", "is too short (minimum is 2 characters)"]})
     end
   end
 
-  describe "Update" do
-    let (:product) { Product::Create.(product: {title: "Ruby"}).model }
+  # describe "Update" do
+  #   let (:product) { Product::Create.(product: {title: "Ruby"}).model }
 
-    it "persists valid" do
-      op = Product::Update.(
-        id:      product.id,
-        product: { description: "Dynamic OOP." }
-      )
+  #   it "persists valid" do
+  #     op = Product::Update.(
+  #       id:      product.id,
+  #       product: { description: "Dynamic OOP." }
+  #     )
 
-      op.model.title.must_equal "Ruby"
-      op.model.description.must_equal "Dynamic OOP."
-    end
-  end
+  #     op.model.title.must_equal "Ruby"
+  #     op.model.description.must_equal "Dynamic OOP."
+  #   end
+  # end
 end
