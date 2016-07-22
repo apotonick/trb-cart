@@ -32,5 +32,5 @@ gem "reform"#, "2.1.0"
 
 gem "trailblazer-cells"
 gem "cells"#, "4.0.3"
-gem "cells-haml"#, "0.0.8"
-gem "haml"#, github: "haml/haml", ref: "7c7c169"
+gem "cells-slim"#, "0.0.8"
+# gem "haml"#, github: "haml/haml", ref: "7c7c169"
